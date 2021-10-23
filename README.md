@@ -45,5 +45,12 @@ Joblib is an alternative to model saving in a way that it can operate on objects
 ##### To save the model we will use its dump functionality to save the model to the model_jlib file.
 
 ##### saving our model # model - model , filename-model_jlib
-        joblib.dump(model , 'model_jlib')
+         with open("D:\\data\\model_joblibonLinearreg",'wb')as f2:
+              joblib.dump(reg,f2)e created with a filename and contents will be similar to the pickle file.
+##### load saved model
 After running the above code a file will be created with a filename and contents will be similar to the pickle file.
+
+         with open("D:\\data\\model_joblibonLinearreg", 'rb')as f2:
+              model2=joblib.load(f2)
+##### check prediction
+            model2.predict([[2020]] # similar
